@@ -1,7 +1,7 @@
 bash "add erlang source to apt sources" do
   code <<-EOH
-    echo 'deb http://binaries.erlang-solutions.com/debian precise contrib' >> /etc/apt/sources.list
-    wget -O - http://binaries.erlang-solutions.com/debian/erlang_solutions.asc | apt-key add -
+    echo 'deb http://packages.erlang-solutions.com/debian precise contrib' >> /etc/apt/sources.list
+    wget -O - http://packages.erlang-solutions.com/debian/erlang_solutions.asc | apt-key add -
   EOH
   not_if "grep asdfsdf /etc/apt/sources.list"
 end
