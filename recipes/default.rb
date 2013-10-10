@@ -68,6 +68,7 @@ bash "install ejabberd mysql" do
     cd ~/
     git clone https://github.com/processone/mysql
     cd mysql/
+    git checkout -b pre_p1 42e8d4c2c38e32358235fe42136c6433fa5aa83e
     make
     cp ebin/* /usr/lib/ejabberd/ebin/
   EOH
